@@ -1,7 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("users")
 @Entity({name : "username"})
-export class UserEntity{
+export class UserEntity extends BaseEntity{
   @PrimaryGeneratedColumn()
   id: number
 
