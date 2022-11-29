@@ -10,6 +10,18 @@ export class UserCreateDtos{
   password: string
 }
 
+export class UserDeleteDtos{
+  @ApiProperty()
+  id: number
+  @ApiProperty()
+  name: string
+  @ApiProperty()
+  email: string
+  @ApiProperty()
+  password: string
+}
+
+
 export class UserUpdateDtos{
   @ApiProperty()
   id: number
@@ -33,6 +45,17 @@ export class UserUpdateResponseDtos{
 }
 
 export class UserCreateResponseDtos{
+  @ApiProperty()
+  id: number
+  @ApiProperty()
+  name: string
+  @ApiProperty()
+  email: string
+  @ApiProperty()
+  password: string
+}
+
+export class UserDeleteResponseDtos{
   @ApiProperty()
   id: number
   @ApiProperty()
