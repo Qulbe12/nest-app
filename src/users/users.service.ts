@@ -31,8 +31,8 @@ export class UsersService {
     await this.usersRepository.update(id , user)
   }
 
-  async remove(id: number): Promise<UserDeleteDtos>{
-   const response =  await this.usersRepository.softDelete(id)
+  async remove(id: number){
+    const response = await this.usersRepository.delete(id)
     return response
   }
 }
